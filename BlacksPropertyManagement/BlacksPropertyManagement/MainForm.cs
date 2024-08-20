@@ -12,6 +12,17 @@ namespace BlacksPropertyManagement
 {
     public partial class MainForm : Form
     {
+        private DataController      DC;
+        private AddJobForm          frmJobAdd;
+        private AddPropertyForm     frmPropertyAdd;
+        private AssignMaterialForm  frmMaterialAdd;
+        private DeleteJobForm       frmJobDelete;
+        private DeletePropertyForm  frmPropertyDelete;
+        private InvoicesForm        frmInvoicesReport;
+        private RemoveMaterialForm  frmMaterialDelete;
+        private TradesmenReportForm frmTradesmenReport;
+        private UpdateJobForm       frmJobUpdate;
+        private UpdatePropertyForm  frmPropertyUpdate;
         public MainForm()
         {
             InitializeComponent();
@@ -19,28 +30,27 @@ namespace BlacksPropertyManagement
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-
+            DC = new DataController();
         }
 
         private void btnAddProperty_Click(object sender, EventArgs e)
         {
-            frmPropertyAdd = new AddPropertyForm(DC, this);
-            frmPropertyAdd.ShowDialog();
-
+   
         }
 
         private void btnAddJob_Click(object sender, EventArgs e)
         {
-            frmJobAdd = new AddJobForm(DC, this);
-            frmJobAdd.ShowDialog();
 
         }
 
         private void btnAssignMaterial_Click(object sender, EventArgs e)
         {
-            frmMaterialAdd = new AssignMaterialForm(DC, this);
-            frmMaterialAdd.ShowDialog();
 
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
