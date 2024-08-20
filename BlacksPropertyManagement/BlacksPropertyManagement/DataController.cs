@@ -47,7 +47,7 @@ namespace BlacksPropertyManagement
             tradesmanView = new DataView(dtTradesman);
             tradesmanView.Sort = "TradesmanID";
             materialView = new DataView(dtMaterial);
-            materialView.Sort = "ItemID";
+            materialView.Sort = "MaterialID";
             landlordView = new DataView(dtLandlord);
             landlordView.Sort = "LandlordID";
             jobView = new DataView(dtJob);

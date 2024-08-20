@@ -12,9 +12,16 @@ namespace BlacksPropertyManagement
 {
     public partial class AssignMaterialForm : Form
     {
-        public AssignMaterialForm()
+        private DataController DC;
+        private MainForm frmMenu;
+
+        public AssignMaterialForm(DataController dc, MainForm mnu)
         {
             InitializeComponent();
+            DC = dc;
+            frmMenu = mnu;
+            frmMenu.Hide();
+
         }
     }
 }

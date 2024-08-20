@@ -14,3 +14,8 @@ C:\5603\BlacksPropertyManagement\BlacksPropertyManagement\obj\Debug\BlacksProper
 C:\5603\BlacksPropertyManagement\BlacksPropertyManagement\obj\Debug\BlacksPropertyManagement.UpdatePropertyForm.resources
 C:\5603\BlacksPropertyManagement\BlacksPropertyManagement\obj\Debug\BlacksPropertyManagement.csproj.GenerateResource.cache
 C:\5603\BlacksPropertyManagement\BlacksPropertyManagement\obj\Debug\BlacksPropertyManagement.csproj.CoreCompileInputs.cache
+C:\5603\BlacksPropertyManagement\BlacksPropertyManagement\bin\Debug\BlacksPropertyManagement.exe.config
+C:\5603\BlacksPropertyManagement\BlacksPropertyManagement\bin\Debug\BlacksPropertyManagement.exe
+C:\5603\BlacksPropertyManagement\BlacksPropertyManagement\bin\Debug\BlacksPropertyManagement.pdb
+C:\5603\BlacksPropertyManagement\BlacksPropertyManagement\obj\Debug\BlacksPropertyManagement.exe
+C:\5603\BlacksPropertyManagement\BlacksPropertyManagement\obj\Debug\BlacksPropertyManagement.pdb

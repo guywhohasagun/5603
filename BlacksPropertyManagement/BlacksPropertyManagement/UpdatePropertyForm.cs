@@ -12,9 +12,16 @@ namespace BlacksPropertyManagement
 {
     public partial class UpdatePropertyForm : Form
     {
-        public UpdatePropertyForm()
+        private DataController DC;
+        private MainForm frmMenu;
+
+        public UpdatePropertyForm(DataController dc, MainForm mnu)
         {
             InitializeComponent();
+            DC = dc;
+            frmMenu = mnu;
+            frmMenu.Hide();
+
         }
     }
 }

@@ -12,9 +12,16 @@ namespace BlacksPropertyManagement
 {
     public partial class AddPropertyForm : Form
     {
-        public AddPropertyForm()
+        private DataController DC;
+        private MainForm frmMenu;
+
+        public AddPropertyForm(DataController dc, MainForm mnu)
         {
             InitializeComponent();
+            DC = dc;
+            frmMenu = mnu;
+            frmMenu.Hide();
+
         }
     }
 }

@@ -12,9 +12,16 @@ namespace BlacksPropertyManagement
 {
     public partial class DeletePropertyForm : Form
     {
-        public DeletePropertyForm()
+        private DataController DC;
+        private MainForm frmMenu;
+
+        public DeletePropertyForm(DataController dc, MainForm mnu)
         {
             InitializeComponent();
+            DC = dc;
+            frmMenu = mnu;
+            frmMenu.Hide();
+
         }
     }
 }

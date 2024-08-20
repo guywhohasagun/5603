@@ -12,9 +12,16 @@ namespace BlacksPropertyManagement
 {
     public partial class TradesmenReportForm : Form
     {
-        public TradesmenReportForm()
+        private DataController DC;
+        private MainForm frmMenu;
+
+        public TradesmenReportForm(DataController dc, MainForm mnu)
         {
             InitializeComponent();
+            DC = dc;
+            frmMenu = mnu;
+            frmMenu.Hide();
+
         }
     }
 }

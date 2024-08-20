@@ -60,6 +60,7 @@ namespace BlacksPropertyManagement
             this.btnUpdateProperty.TabIndex = 1;
             this.btnUpdateProperty.Text = "Update a Property";
             this.btnUpdateProperty.UseVisualStyleBackColor = true;
+            this.btnUpdateProperty.Click += new System.EventHandler(this.btnUpdateProperty_Click);
             // 
             // btnDeleteProperty
             // 
@@ -69,6 +70,7 @@ namespace BlacksPropertyManagement
             this.btnDeleteProperty.TabIndex = 2;
             this.btnDeleteProperty.Text = "Delete a Property";
             this.btnDeleteProperty.UseVisualStyleBackColor = true;
+            this.btnDeleteProperty.Click += new System.EventHandler(this.btnDeleteProperty_Click);
             // 
             // btnAddJob
             // 
@@ -88,6 +90,7 @@ namespace BlacksPropertyManagement
             this.btnUpdateJob.TabIndex = 4;
             this.btnUpdateJob.Text = "Update a Job";
             this.btnUpdateJob.UseVisualStyleBackColor = true;
+            this.btnUpdateJob.Click += new System.EventHandler(this.btnUpdateJob_Click);
             // 
             // btnDeleteJob
             // 
@@ -97,6 +100,7 @@ namespace BlacksPropertyManagement
             this.btnDeleteJob.TabIndex = 5;
             this.btnDeleteJob.Text = "Delete a Job";
             this.btnDeleteJob.UseVisualStyleBackColor = true;
+            this.btnDeleteJob.Click += new System.EventHandler(this.btnDeleteJob_Click);
             // 
             // btnInvoices
             // 
@@ -106,6 +110,7 @@ namespace BlacksPropertyManagement
             this.btnInvoices.TabIndex = 6;
             this.btnInvoices.Text = "Print Invoices";
             this.btnInvoices.UseVisualStyleBackColor = true;
+            this.btnInvoices.Click += new System.EventHandler(this.btnInvoices_Click);
             // 
             // btnTradesmenReport
             // 
@@ -115,6 +120,7 @@ namespace BlacksPropertyManagement
             this.btnTradesmenReport.TabIndex = 7;
             this.btnTradesmenReport.Text = "Print Tradesmen Report";
             this.btnTradesmenReport.UseVisualStyleBackColor = true;
+            this.btnTradesmenReport.Click += new System.EventHandler(this.btnTradesmenReport_Click);
             // 
             // btnAssignMaterial
             // 
@@ -134,6 +140,7 @@ namespace BlacksPropertyManagement
             this.btnRemoveMaterial.TabIndex = 9;
             this.btnRemoveMaterial.Text = "Remove Material";
             this.btnRemoveMaterial.UseVisualStyleBackColor = true;
+            this.btnRemoveMaterial.Click += new System.EventHandler(this.btnRemoveMaterial_Click);
             // 
             // btnExit
             // 
@@ -147,7 +154,7 @@ namespace BlacksPropertyManagement
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 675);
             this.Controls.Add(this.btnExit);

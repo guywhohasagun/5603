@@ -12,9 +12,16 @@ namespace BlacksPropertyManagement
 {
     public partial class InvoicesForm : Form
     {
-        public InvoicesForm()
+        private DataController DC;
+        private MainForm frmMenu;
+
+        public InvoicesForm(DataController dc, MainForm mnu)
         {
             InitializeComponent();
+            DC = dc;
+            frmMenu = mnu;
+            frmMenu.Hide();
+
         }
     }
 }

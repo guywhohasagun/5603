@@ -12,9 +12,16 @@ namespace BlacksPropertyManagement
 {
     public partial class AddJobForm : Form
     {
-        public AddJobForm()
+        private DataController DC;
+        private MainForm frmMenu;
+
+        public AddJobForm(DataController dc, MainForm mnu)
         {
             InitializeComponent();
+            DC = dc;
+            frmMenu = mnu;
+            frmMenu.Hide();
+
         }
     }
 }

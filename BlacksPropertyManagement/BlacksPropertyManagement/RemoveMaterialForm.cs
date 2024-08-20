@@ -12,9 +12,16 @@ namespace BlacksPropertyManagement
 {
     public partial class RemoveMaterialForm : Form
     {
-        public RemoveMaterialForm()
+        private DataController DC;
+        private MainForm frmMenu;
+
+        public RemoveMaterialForm(DataController dc, MainForm mnu)
         {
             InitializeComponent();
+            DC = dc;
+            frmMenu = mnu;
+            frmMenu.Hide();
+
         }
     }
 }
