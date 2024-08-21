@@ -58,5 +58,9 @@ namespace BlacksPropertyManagement
             
 
         }
+        public void UpdateProperty()
+        {
+            daProperty.Update(dsBlacksProperty, "Property");
+        }
     }
 }

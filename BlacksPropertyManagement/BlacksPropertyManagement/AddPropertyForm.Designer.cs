@@ -59,7 +59,7 @@ namespace BlacksPropertyManagement
             this.txtStreetAddress.Location = new System.Drawing.Point(237, 35);
             this.txtStreetAddress.MaxLength = 60;
             this.txtStreetAddress.Name = "txtStreetAddress";
-            this.txtStreetAddress.Size = new System.Drawing.Size(616, 27);
+            this.txtStreetAddress.Size = new System.Drawing.Size(616, 32);
             this.txtStreetAddress.TabIndex = 0;
             // 
             // lblStreetAddress
@@ -67,7 +67,7 @@ namespace BlacksPropertyManagement
             this.lblStreetAddress.AutoSize = true;
             this.lblStreetAddress.Location = new System.Drawing.Point(60, 38);
             this.lblStreetAddress.Name = "lblStreetAddress";
-            this.lblStreetAddress.Size = new System.Drawing.Size(107, 19);
+            this.lblStreetAddress.Size = new System.Drawing.Size(137, 24);
             this.lblStreetAddress.TabIndex = 5;
             this.lblStreetAddress.Text = "Street Address:";
             // 
@@ -76,7 +76,7 @@ namespace BlacksPropertyManagement
             this.txtSuburb.Location = new System.Drawing.Point(237, 85);
             this.txtSuburb.MaxLength = 20;
             this.txtSuburb.Name = "txtSuburb";
-            this.txtSuburb.Size = new System.Drawing.Size(616, 27);
+            this.txtSuburb.Size = new System.Drawing.Size(616, 32);
             this.txtSuburb.TabIndex = 6;
             // 
             // txtFirstName
@@ -84,7 +84,7 @@ namespace BlacksPropertyManagement
             this.txtFirstName.Location = new System.Drawing.Point(237, 329);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.ReadOnly = true;
-            this.txtFirstName.Size = new System.Drawing.Size(616, 27);
+            this.txtFirstName.Size = new System.Drawing.Size(616, 32);
             this.txtFirstName.TabIndex = 7;
             // 
             // txtLandlordSuburb
@@ -92,7 +92,7 @@ namespace BlacksPropertyManagement
             this.txtLandlordSuburb.Location = new System.Drawing.Point(237, 432);
             this.txtLandlordSuburb.Name = "txtLandlordSuburb";
             this.txtLandlordSuburb.ReadOnly = true;
-            this.txtLandlordSuburb.Size = new System.Drawing.Size(616, 27);
+            this.txtLandlordSuburb.Size = new System.Drawing.Size(616, 32);
             this.txtLandlordSuburb.TabIndex = 8;
             // 
             // txtLandlordStreetAddress
@@ -100,7 +100,7 @@ namespace BlacksPropertyManagement
             this.txtLandlordStreetAddress.Location = new System.Drawing.Point(237, 374);
             this.txtLandlordStreetAddress.Name = "txtLandlordStreetAddress";
             this.txtLandlordStreetAddress.ReadOnly = true;
-            this.txtLandlordStreetAddress.Size = new System.Drawing.Size(616, 27);
+            this.txtLandlordStreetAddress.Size = new System.Drawing.Size(616, 32);
             this.txtLandlordStreetAddress.TabIndex = 9;
             // 
             // txtLastName
@@ -108,7 +108,7 @@ namespace BlacksPropertyManagement
             this.txtLastName.Location = new System.Drawing.Point(237, 280);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.ReadOnly = true;
-            this.txtLastName.Size = new System.Drawing.Size(616, 27);
+            this.txtLastName.Size = new System.Drawing.Size(616, 32);
             this.txtLastName.TabIndex = 10;
             // 
             // lblSuburb
@@ -116,7 +116,7 @@ namespace BlacksPropertyManagement
             this.lblSuburb.AutoSize = true;
             this.lblSuburb.Location = new System.Drawing.Point(60, 88);
             this.lblSuburb.Name = "lblSuburb";
-            this.lblSuburb.Size = new System.Drawing.Size(57, 19);
+            this.lblSuburb.Size = new System.Drawing.Size(75, 24);
             this.lblSuburb.TabIndex = 11;
             this.lblSuburb.Text = "Suburb:";
             // 
@@ -125,7 +125,7 @@ namespace BlacksPropertyManagement
             this.lblStatus.AutoSize = true;
             this.lblStatus.Location = new System.Drawing.Point(60, 134);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(53, 19);
+            this.lblStatus.Size = new System.Drawing.Size(67, 24);
             this.lblStatus.TabIndex = 12;
             this.lblStatus.Text = "Status:";
             // 
@@ -134,7 +134,7 @@ namespace BlacksPropertyManagement
             this.lblYearBuilt.AutoSize = true;
             this.lblYearBuilt.Location = new System.Drawing.Point(60, 180);
             this.lblYearBuilt.Name = "lblYearBuilt";
-            this.lblYearBuilt.Size = new System.Drawing.Size(75, 19);
+            this.lblYearBuilt.Size = new System.Drawing.Size(95, 24);
             this.lblYearBuilt.TabIndex = 13;
             this.lblYearBuilt.Text = "Year Built:";
             // 
@@ -143,7 +143,7 @@ namespace BlacksPropertyManagement
             this.lblLandlord.AutoSize = true;
             this.lblLandlord.Location = new System.Drawing.Point(60, 233);
             this.lblLandlord.Name = "lblLandlord";
-            this.lblLandlord.Size = new System.Drawing.Size(76, 19);
+            this.lblLandlord.Size = new System.Drawing.Size(97, 24);
             this.lblLandlord.TabIndex = 14;
             this.lblLandlord.Text = "Landlords:";
             // 
@@ -152,7 +152,7 @@ namespace BlacksPropertyManagement
             this.lblLastName.AutoSize = true;
             this.lblLastName.Location = new System.Drawing.Point(60, 283);
             this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(142, 19);
+            this.lblLastName.Size = new System.Drawing.Size(181, 24);
             this.lblLastName.TabIndex = 15;
             this.lblLastName.Text = "Landlord Last Name:";
             // 
@@ -161,7 +161,7 @@ namespace BlacksPropertyManagement
             this.lblFirstName.AutoSize = true;
             this.lblFirstName.Location = new System.Drawing.Point(60, 332);
             this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(143, 19);
+            this.lblFirstName.Size = new System.Drawing.Size(184, 24);
             this.lblFirstName.TabIndex = 16;
             this.lblFirstName.Text = "Landlord First Name:";
             // 
@@ -170,7 +170,7 @@ namespace BlacksPropertyManagement
             this.lblLandlordStreetAddress.AutoSize = true;
             this.lblLandlordStreetAddress.Location = new System.Drawing.Point(60, 377);
             this.lblLandlordStreetAddress.Name = "lblLandlordStreetAddress";
-            this.lblLandlordStreetAddress.Size = new System.Drawing.Size(107, 19);
+            this.lblLandlordStreetAddress.Size = new System.Drawing.Size(137, 24);
             this.lblLandlordStreetAddress.TabIndex = 17;
             this.lblLandlordStreetAddress.Text = "Street Address:";
             this.lblLandlordStreetAddress.Click += new System.EventHandler(this.label7_Click);
@@ -180,7 +180,7 @@ namespace BlacksPropertyManagement
             this.lblLandlordSuburb.AutoSize = true;
             this.lblLandlordSuburb.Location = new System.Drawing.Point(60, 432);
             this.lblLandlordSuburb.Name = "lblLandlordSuburb";
-            this.lblLandlordSuburb.Size = new System.Drawing.Size(57, 19);
+            this.lblLandlordSuburb.Size = new System.Drawing.Size(75, 24);
             this.lblLandlordSuburb.TabIndex = 18;
             this.lblLandlordSuburb.Text = "Suburb:";
             // 
@@ -193,7 +193,7 @@ namespace BlacksPropertyManagement
             this.cboStatus.Location = new System.Drawing.Point(237, 131);
             this.cboStatus.MaxLength = 10;
             this.cboStatus.Name = "cboStatus";
-            this.cboStatus.Size = new System.Drawing.Size(130, 27);
+            this.cboStatus.Size = new System.Drawing.Size(130, 32);
             this.cboStatus.TabIndex = 19;
             this.cboStatus.Text = "Occupied";
             // 
@@ -202,7 +202,7 @@ namespace BlacksPropertyManagement
             this.cboLandlord.FormattingEnabled = true;
             this.cboLandlord.Location = new System.Drawing.Point(237, 230);
             this.cboLandlord.Name = "cboLandlord";
-            this.cboLandlord.Size = new System.Drawing.Size(194, 27);
+            this.cboLandlord.Size = new System.Drawing.Size(194, 32);
             this.cboLandlord.TabIndex = 20;
             // 
             // cboFirstName
@@ -210,7 +210,7 @@ namespace BlacksPropertyManagement
             this.cboFirstName.FormattingEnabled = true;
             this.cboFirstName.Location = new System.Drawing.Point(681, 230);
             this.cboFirstName.Name = "cboFirstName";
-            this.cboFirstName.Size = new System.Drawing.Size(172, 27);
+            this.cboFirstName.Size = new System.Drawing.Size(172, 32);
             this.cboFirstName.TabIndex = 21;
             // 
             // cboLastName
@@ -218,7 +218,7 @@ namespace BlacksPropertyManagement
             this.cboLastName.FormattingEnabled = true;
             this.cboLastName.Location = new System.Drawing.Point(448, 230);
             this.cboLastName.Name = "cboLastName";
-            this.cboLastName.Size = new System.Drawing.Size(212, 27);
+            this.cboLastName.Size = new System.Drawing.Size(212, 32);
             this.cboLastName.TabIndex = 22;
             // 
             // nudYearBuilt
@@ -235,7 +235,7 @@ namespace BlacksPropertyManagement
             0,
             0});
             this.nudYearBuilt.Name = "nudYearBuilt";
-            this.nudYearBuilt.Size = new System.Drawing.Size(130, 27);
+            this.nudYearBuilt.Size = new System.Drawing.Size(130, 32);
             this.nudYearBuilt.TabIndex = 23;
             this.nudYearBuilt.Value = new decimal(new int[] {
             1900,
@@ -251,6 +251,7 @@ namespace BlacksPropertyManagement
             this.btnReturn.TabIndex = 24;
             this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // btnAddProperty
             // 
@@ -260,10 +261,11 @@ namespace BlacksPropertyManagement
             this.btnAddProperty.TabIndex = 25;
             this.btnAddProperty.Text = "Add Property";
             this.btnAddProperty.UseVisualStyleBackColor = true;
+            this.btnAddProperty.Click += new System.EventHandler(this.btnAddProperty_Click);
             // 
             // AddPropertyForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 675);
             this.Controls.Add(this.btnAddProperty);

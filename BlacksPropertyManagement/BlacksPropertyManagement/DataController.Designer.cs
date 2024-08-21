@@ -31,11 +31,11 @@ namespace BlacksPropertyManagement
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DataController));
             this.oleDbSelectCommand1 = new System.Data.OleDb.OleDbCommand();
+            this.ctnBlackProperty = new System.Data.OleDb.OleDbConnection();
             this.oleDbInsertCommand1 = new System.Data.OleDb.OleDbCommand();
             this.oleDbUpdateCommand1 = new System.Data.OleDb.OleDbCommand();
             this.oleDbDeleteCommand1 = new System.Data.OleDb.OleDbCommand();
             this.daJob = new System.Data.OleDb.OleDbDataAdapter();
-            this.ctnBlackProperty = new System.Data.OleDb.OleDbConnection();
             this.oleDbSelectCommand2 = new System.Data.OleDb.OleDbCommand();
             this.oleDbInsertCommand2 = new System.Data.OleDb.OleDbCommand();
             this.oleDbUpdateCommand2 = new System.Data.OleDb.OleDbCommand();
@@ -69,6 +69,10 @@ namespace BlacksPropertyManagement
             // 
             this.oleDbSelectCommand1.CommandText = "SELECT JOB.*\r\nFROM     JOB\r\nORDER BY JobID";
             this.oleDbSelectCommand1.Connection = this.ctnBlackProperty;
+            // 
+            // ctnBlackProperty
+            // 
+            this.ctnBlackProperty.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\\5603\\BlacksProperty.mdb";
             // 
             // oleDbInsertCommand1
             // 
@@ -142,10 +146,6 @@ namespace BlacksPropertyManagement
                         new System.Data.Common.DataColumnMapping("PropertyID", "PropertyID"),
                         new System.Data.Common.DataColumnMapping("TradesmanID", "TradesmanID")})});
             this.daJob.UpdateCommand = this.oleDbUpdateCommand1;
-            // 
-            // ctnBlackProperty
-            // 
-            this.ctnBlackProperty.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\\5603\\BlacksProperty.mdb";
             // 
             // oleDbSelectCommand2
             // 
@@ -518,6 +518,6 @@ namespace BlacksPropertyManagement
         private System.Data.OleDb.OleDbCommand oleDbUpdateCommand6;
         private System.Data.OleDb.OleDbCommand oleDbDeleteCommand6;
         private System.Data.OleDb.OleDbDataAdapter daJobMaterial;
-        private BlacksPropertyDataSet dsBlacksProperty;
+        public BlacksPropertyDataSet dsBlacksProperty;
     }
 }
