@@ -62,5 +62,17 @@ namespace BlacksPropertyManagement
         {
             daProperty.Update(dsBlacksProperty, "Property");
         }
+
+        private void daProperty_RowUpdated(object sender, OleDbRowUpdatedEventArgs e)
+        {
+            int newID = 0;
+            OleDbCommand idCMD = new OleDbCommand("SELECT @@IDENTITY", ctnBlackProperty);
+            if (e.StatementType == StatementType.Insert)
+            {
+                newID = (int)idCMD.ExecuteScalar();
+                e.Row["PropertyID"] = newID;
+            }
+
+        }
     }
 }

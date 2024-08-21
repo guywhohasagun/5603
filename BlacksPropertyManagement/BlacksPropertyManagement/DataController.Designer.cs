@@ -349,6 +349,7 @@ namespace BlacksPropertyManagement
                         new System.Data.Common.DataColumnMapping("YearBuilt", "YearBuilt"),
                         new System.Data.Common.DataColumnMapping("LandlordID", "LandlordID")})});
             this.daProperty.UpdateCommand = this.oleDbUpdateCommand4;
+            this.daProperty.RowUpdated += new System.Data.OleDb.OleDbRowUpdatedEventHandler(this.daProperty_RowUpdated);
             // 
             // oleDbSelectCommand5
             // 
