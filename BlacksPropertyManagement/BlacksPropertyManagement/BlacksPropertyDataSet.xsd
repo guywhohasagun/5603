@@ -790,6 +790,10 @@
       <xs:selector xpath=".//mstns:TRADESMAN1" />
       <xs:field xpath="mstns:TradesmanID" />
     </xs:unique>
+    <xs:keyref name="LANDLORDPROPERTY" refer="LANDLORD_Constraint1" msprop:rel_Generator_UserChildTable="PROPERTY" msprop:rel_Generator_ChildPropName="GetPROPERTYRows" msprop:rel_Generator_UserRelationName="LANDLORDPROPERTY" msprop:rel_Generator_ParentPropName="LANDLORDRow" msprop:rel_Generator_RelationVarName="relationLANDLORDPROPERTY" msprop:rel_Generator_UserParentTable="LANDLORD" msdata:UpdateRule="None" msdata:DeleteRule="None">
+      <xs:selector xpath=".//mstns:PROPERTY" />
+      <xs:field xpath="mstns:LandlordID" />
+    </xs:keyref>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
@@ -797,7 +801,6 @@
       <msdata:Relationship name="TRADESMANJOB" msdata:parent="TRADESMAN" msdata:child="JOB" msdata:parentkey="TradesmanID" msdata:childkey="TradesmanID" msprop:Generator_UserChildTable="JOB" msprop:Generator_ChildPropName="GetJOBRows" msprop:Generator_UserRelationName="TRADESMANJOB" msprop:Generator_ParentPropName="TRADESMANRow" msprop:Generator_RelationVarName="relationTRADESMANJOB" msprop:Generator_UserParentTable="TRADESMAN" />
       <msdata:Relationship name="JOBJOBMATERIAL" msdata:parent="JOB" msdata:child="JOBMATERIAL" msdata:parentkey="JobID" msdata:childkey="JobID" msprop:Generator_UserChildTable="JOBMATERIAL" msprop:Generator_ChildPropName="GetJOBMATERIALRows" msprop:Generator_UserRelationName="JOBJOBMATERIAL" msprop:Generator_RelationVarName="relationJOBJOBMATERIAL" msprop:Generator_UserParentTable="JOB" msprop:Generator_ParentPropName="JOBRow" />
       <msdata:Relationship name="MATERIALJOBMATERIAL" msdata:parent="MATERIAL" msdata:child="JOBMATERIAL" msdata:parentkey="MaterialID" msdata:childkey="MaterialID" msprop:Generator_UserChildTable="JOBMATERIAL" msprop:Generator_ChildPropName="GetJOBMATERIALRows" msprop:Generator_UserRelationName="MATERIALJOBMATERIAL" msprop:Generator_ParentPropName="MATERIALRow" msprop:Generator_RelationVarName="relationMATERIALJOBMATERIAL" msprop:Generator_UserParentTable="MATERIAL" />
-      <msdata:Relationship name="LANDLORDPROPERTY" msdata:parent="LANDLORD" msdata:child="PROPERTY" msdata:parentkey="LandlordID" msdata:childkey="LandlordID" msprop:Generator_UserChildTable="PROPERTY" msprop:Generator_ChildPropName="GetPROPERTYRows" msprop:Generator_UserRelationName="LANDLORDPROPERTY" msprop:Generator_RelationVarName="relationLANDLORDPROPERTY" msprop:Generator_UserParentTable="LANDLORD" msprop:Generator_ParentPropName="LANDLORDRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

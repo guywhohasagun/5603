@@ -55,8 +55,13 @@ namespace BlacksPropertyManagement
             jobMaterialView = new DataView(dtJobMaterial);
             jobMaterialView.Sort = "JobID,MaterialID";
             dsBlacksProperty.EnforceConstraints = true;
-            
 
+
+        }
+
+        public void UpdateJob()
+        {
+            daJob.Update(dsBlacksProperty, "Job");
         }
         public void UpdateProperty()
         {
@@ -73,6 +78,17 @@ namespace BlacksPropertyManagement
                 e.Row["PropertyID"] = newID;
             }
 
+        }
+
+        private void daJob_RowUpdated(object sender, OleDbRowUpdatedEventArgs e)
+        {
+            int newID = 0;
+            OleDbCommand idCMD = new OleDbCommand("SELECT @@IDENTITY", ctnBlackProperty);
+            if (e.StatementType == StatementType.Insert)
+            {
+                newID = (int)idCMD.ExecuteScalar();
+                e.Row["JobID"] = newID;
+            }
         }
     }
 }

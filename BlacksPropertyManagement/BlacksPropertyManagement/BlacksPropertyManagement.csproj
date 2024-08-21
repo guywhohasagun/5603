@@ -64,6 +64,9 @@
     <Compile Include="AssignMaterialForm.Designer.cs">
       <DependentUpon>AssignMaterialForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="BlacksPropertyDataSet.cs">
+      <DependentUpon>BlacksPropertyDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="BlacksPropertyDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

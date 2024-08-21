@@ -146,6 +146,7 @@ namespace BlacksPropertyManagement
                         new System.Data.Common.DataColumnMapping("PropertyID", "PropertyID"),
                         new System.Data.Common.DataColumnMapping("TradesmanID", "TradesmanID")})});
             this.daJob.UpdateCommand = this.oleDbUpdateCommand1;
+            this.daJob.RowUpdated += new System.Data.OleDb.OleDbRowUpdatedEventHandler(this.daJob_RowUpdated);
             // 
             // oleDbSelectCommand2
             // 
@@ -476,9 +477,10 @@ namespace BlacksPropertyManagement
             // 
             // DataController
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "DataController";
             this.Text = "DataController";
             ((System.ComponentModel.ISupportInitialize)(this.dsBlacksProperty)).EndInit();

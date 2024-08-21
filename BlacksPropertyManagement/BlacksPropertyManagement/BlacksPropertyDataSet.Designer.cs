@@ -48,6 +48,8 @@ namespace BlacksPropertyManagement {
         
         private TRADESMAN1DataTable tableTRADESMAN1;
         
+        private global::System.Data.DataRelation relationLANDLORDPROPERTY;
+        
         private global::System.Data.DataRelation relationPROPERTYJOB;
         
         private global::System.Data.DataRelation relationTRADESMANJOB;
@@ -55,8 +57,6 @@ namespace BlacksPropertyManagement {
         private global::System.Data.DataRelation relationJOBJOBMATERIAL;
         
         private global::System.Data.DataRelation relationMATERIALJOBMATERIAL;
-        
-        private global::System.Data.DataRelation relationLANDLORDPROPERTY;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -468,11 +468,11 @@ namespace BlacksPropertyManagement {
                     this.tableTRADESMAN1.InitVars();
                 }
             }
+            this.relationLANDLORDPROPERTY = this.Relations["LANDLORDPROPERTY"];
             this.relationPROPERTYJOB = this.Relations["PROPERTYJOB"];
             this.relationTRADESMANJOB = this.Relations["TRADESMANJOB"];
             this.relationJOBJOBMATERIAL = this.Relations["JOBJOBMATERIAL"];
             this.relationMATERIALJOBMATERIAL = this.Relations["MATERIALJOBMATERIAL"];
-            this.relationLANDLORDPROPERTY = this.Relations["LANDLORDPROPERTY"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -507,6 +507,18 @@ namespace BlacksPropertyManagement {
             base.Tables.Add(this.tablePROPERTY1);
             this.tableTRADESMAN1 = new TRADESMAN1DataTable();
             base.Tables.Add(this.tableTRADESMAN1);
+            global::System.Data.ForeignKeyConstraint fkc;
+            fkc = new global::System.Data.ForeignKeyConstraint("LANDLORDPROPERTY", new global::System.Data.DataColumn[] {
+                        this.tableLANDLORD.LandlordIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tablePROPERTY.LandlordIDColumn});
+            this.tablePROPERTY.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.None;
+            fkc.UpdateRule = global::System.Data.Rule.None;
+            this.relationLANDLORDPROPERTY = new global::System.Data.DataRelation("LANDLORDPROPERTY", new global::System.Data.DataColumn[] {
+                        this.tableLANDLORD.LandlordIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tablePROPERTY.LandlordIDColumn}, false);
+            this.Relations.Add(this.relationLANDLORDPROPERTY);
             this.relationPROPERTYJOB = new global::System.Data.DataRelation("PROPERTYJOB", new global::System.Data.DataColumn[] {
                         this.tablePROPERTY.PropertyIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableJOB.PropertyIDColumn}, false);
@@ -523,10 +535,6 @@ namespace BlacksPropertyManagement {
                         this.tableMATERIAL.MaterialIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableJOBMATERIAL.MaterialIDColumn}, false);
             this.Relations.Add(this.relationMATERIALJOBMATERIAL);
-            this.relationLANDLORDPROPERTY = new global::System.Data.DataRelation("LANDLORDPROPERTY", new global::System.Data.DataColumn[] {
-                        this.tableLANDLORD.LandlordIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tablePROPERTY.LandlordIDColumn}, false);
-            this.Relations.Add(this.relationLANDLORDPROPERTY);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

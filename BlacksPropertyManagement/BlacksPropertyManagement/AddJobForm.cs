@@ -29,7 +29,7 @@ namespace BlacksPropertyManagement
 
         }
 
-        private void loadOwners()
+        private void loadLandlords()
         {
             string landlordText = "";
             foreach (DataRow drLandlord in DC.dtLandlord.Rows)
@@ -69,6 +69,64 @@ namespace BlacksPropertyManagement
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            Close();
+            frmMenu.Show();
+        }
+
+        private void btnAddJob_Click(object sender, EventArgs e)
+        {
+            if (txtDiscription.Text == "" || nudFee.Text == "" || cboTradesman.Text == "")
+            {
+                MessageBox.Show("Please fill in all fields correctly", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                DataRow newJobRow = DC.dtJob.NewRow();
+                newJobRow["JobDescription"] = txtDiscription.Text;
+                newJobRow["JobFee"] = nudFee.Value;
+                newJobRow["JobDate"] = dtpDate.Value;
+                newJobRow["TradesmanID"] = cboTradesman.Text;
+                newJobRow["JobStatus"] = "Current";
+                newJobRow["PropertyID"] = propertyID;
+                DC.dsBlacksProperty.Tables["JOB"].Rows.Add(newJobRow);
+                DC.UpdateProperty();
+                MessageBox.Show("Repair added successfully", "Acknowledgment", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ClearFields();
+            }
+        }
+
+        private void lstLandlord_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lstLandlord.SelectedItem != null)
+            {
+                string landlord, propertyText = "";
+                lstLandlord.Items.Clear();
+                landlord = lstLandlord.SelectedItem.ToString();
+                string[] parts = landlord.Split(',');
+                int landlordID = Convert.ToInt32(parts[0]);
+                cmLandlord.Position = DC.landlordView.Find(landlordID);
+                DataRow drLandlord = DC.dtLandlord.Rows[cmLandlord.Position];
+                DataRow[] drPropertys = drLandlord.GetChildRows(DC.dtLandlord.ChildRelations["LANDLORD PROPERTY"]);
+                foreach (DataRow drProperty in drPropertys)
+                {
+                    propertyText = drProperty["PropertyID"] + ", " + drProperty["StreetAddress"].ToString() + ", " + drProperty["Suburb"].ToString();
+                    lstProperty.Items.Add(propertyText);
+                }
+            }
+        }
+
+        private void lstProperty_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lstProperty.SelectedItem != null)
+            {
+                string property = lstProperty.SelectedItem.ToString();
+                string[] parts = property.Split(',');
+                propertyID = Convert.ToInt32(parts[0]);
+            }
         }
     }
 }
