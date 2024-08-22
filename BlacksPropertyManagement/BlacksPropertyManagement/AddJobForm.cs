@@ -66,11 +66,6 @@ namespace BlacksPropertyManagement
             nudFee.Value = 80;
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnReturn_Click(object sender, EventArgs e)
         {
             Close();
@@ -104,18 +99,19 @@ namespace BlacksPropertyManagement
             if (lstLandlord.SelectedItem != null)
             {
                 string landlord, propertyText = "";
-                lstLandlord.Items.Clear();
+                lstProperty.Items.Clear();
                 landlord = lstLandlord.SelectedItem.ToString();
                 string[] parts = landlord.Split(',');
                 int landlordID = Convert.ToInt32(parts[0]);
                 cmLandlord.Position = DC.landlordView.Find(landlordID);
                 DataRow drLandlord = DC.dtLandlord.Rows[cmLandlord.Position];
-                DataRow[] drPropertys = drLandlord.GetChildRows(DC.dtLandlord.ChildRelations["LANDLORD PROPERTY"]);
+                DataRow[] drPropertys = drLandlord.GetChildRows(DC.dtLandlord.ChildRelations["LANDLORD_PROPERTY"]);
                 foreach (DataRow drProperty in drPropertys)
                 {
                     propertyText = drProperty["PropertyID"] + ", " + drProperty["StreetAddress"].ToString() + ", " + drProperty["Suburb"].ToString();
                     lstProperty.Items.Add(propertyText);
                 }
+
             }
         }
 
