@@ -23,5 +23,15 @@ namespace BlacksPropertyManagement
             frmMenu.Hide();
 
         }
+
+        private void dvgProperty_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void nudYearBuilt_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
