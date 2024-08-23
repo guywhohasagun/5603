@@ -48,9 +48,9 @@ namespace BlacksPropertyManagement {
         
         private TRADESMAN1DataTable tableTRADESMAN1;
         
-        private global::System.Data.DataRelation relationLANDLORD_PROPERTY;
+        private global::System.Data.DataRelation relationPROPERTY_JOB;
         
-        private global::System.Data.DataRelation relationPROPERTYJOB;
+        private global::System.Data.DataRelation relationLANDLORD_PROPERTY;
         
         private global::System.Data.DataRelation relationTRADESMANJOB;
         
@@ -468,8 +468,8 @@ namespace BlacksPropertyManagement {
                     this.tableTRADESMAN1.InitVars();
                 }
             }
+            this.relationPROPERTY_JOB = this.Relations["PROPERTY_JOB"];
             this.relationLANDLORD_PROPERTY = this.Relations["LANDLORD_PROPERTY"];
-            this.relationPROPERTYJOB = this.Relations["PROPERTYJOB"];
             this.relationTRADESMANJOB = this.Relations["TRADESMANJOB"];
             this.relationJOBJOBMATERIAL = this.Relations["JOBJOBMATERIAL"];
             this.relationMATERIALJOBMATERIAL = this.Relations["MATERIALJOBMATERIAL"];
@@ -508,6 +508,13 @@ namespace BlacksPropertyManagement {
             this.tableTRADESMAN1 = new TRADESMAN1DataTable();
             base.Tables.Add(this.tableTRADESMAN1);
             global::System.Data.ForeignKeyConstraint fkc;
+            fkc = new global::System.Data.ForeignKeyConstraint("PROPERTY_JOB", new global::System.Data.DataColumn[] {
+                        this.tablePROPERTY.PropertyIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableJOB.PropertyIDColumn});
+            this.tableJOB.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.None;
+            fkc.UpdateRule = global::System.Data.Rule.None;
             fkc = new global::System.Data.ForeignKeyConstraint("LANDLORD_PROPERTY", new global::System.Data.DataColumn[] {
                         this.tableLANDLORD.LandlordIDColumn}, new global::System.Data.DataColumn[] {
                         this.tablePROPERTY.LandlordIDColumn});
@@ -515,14 +522,14 @@ namespace BlacksPropertyManagement {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
             fkc.UpdateRule = global::System.Data.Rule.None;
+            this.relationPROPERTY_JOB = new global::System.Data.DataRelation("PROPERTY_JOB", new global::System.Data.DataColumn[] {
+                        this.tablePROPERTY.PropertyIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableJOB.PropertyIDColumn}, false);
+            this.Relations.Add(this.relationPROPERTY_JOB);
             this.relationLANDLORD_PROPERTY = new global::System.Data.DataRelation("LANDLORD_PROPERTY", new global::System.Data.DataColumn[] {
                         this.tableLANDLORD.LandlordIDColumn}, new global::System.Data.DataColumn[] {
                         this.tablePROPERTY.LandlordIDColumn}, false);
             this.Relations.Add(this.relationLANDLORD_PROPERTY);
-            this.relationPROPERTYJOB = new global::System.Data.DataRelation("PROPERTYJOB", new global::System.Data.DataColumn[] {
-                        this.tablePROPERTY.PropertyIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableJOB.PropertyIDColumn}, false);
-            this.Relations.Add(this.relationPROPERTYJOB);
             this.relationTRADESMANJOB = new global::System.Data.DataRelation("TRADESMANJOB", new global::System.Data.DataColumn[] {
                         this.tableTRADESMAN.TradesmanIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableJOB.TradesmanIDColumn}, false);
@@ -847,7 +854,7 @@ namespace BlacksPropertyManagement {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public JOBRow AddJOBRow(string JobDescription, System.DateTime JobDate, string JobStatus, decimal JobFee, PROPERTYRow parentPROPERTYRowByPROPERTYJOB, TRADESMANRow parentTRADESMANRowByTRADESMANJOB) {
+            public JOBRow AddJOBRow(string JobDescription, System.DateTime JobDate, string JobStatus, decimal JobFee, PROPERTYRow parentPROPERTYRowByPROPERTY_JOB, TRADESMANRow parentTRADESMANRowByTRADESMANJOB) {
                 JOBRow rowJOBRow = ((JOBRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -857,8 +864,8 @@ namespace BlacksPropertyManagement {
                         JobFee,
                         null,
                         null};
-                if ((parentPROPERTYRowByPROPERTYJOB != null)) {
-                    columnValuesArray[5] = parentPROPERTYRowByPROPERTYJOB[0];
+                if ((parentPROPERTYRowByPROPERTY_JOB != null)) {
+                    columnValuesArray[5] = parentPROPERTYRowByPROPERTY_JOB[0];
                 }
                 if ((parentTRADESMANRowByTRADESMANJOB != null)) {
                     columnValuesArray[6] = parentTRADESMANRowByTRADESMANJOB[0];
@@ -4690,10 +4697,10 @@ namespace BlacksPropertyManagement {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public PROPERTYRow PROPERTYRow {
                 get {
-                    return ((PROPERTYRow)(this.GetParentRow(this.Table.ParentRelations["PROPERTYJOB"])));
+                    return ((PROPERTYRow)(this.GetParentRow(this.Table.ParentRelations["PROPERTY_JOB"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["PROPERTYJOB"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["PROPERTY_JOB"]);
                 }
             }
             
@@ -5356,11 +5363,11 @@ namespace BlacksPropertyManagement {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public JOBRow[] GetJOBRows() {
-                if ((this.Table.ChildRelations["PROPERTYJOB"] == null)) {
+                if ((this.Table.ChildRelations["PROPERTY_JOB"] == null)) {
                     return new JOBRow[0];
                 }
                 else {
-                    return ((JOBRow[])(base.GetChildRows(this.Table.ChildRelations["PROPERTYJOB"])));
+                    return ((JOBRow[])(base.GetChildRows(this.Table.ChildRelations["PROPERTY_JOB"])));
                 }
             }
         }

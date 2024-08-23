@@ -424,7 +424,7 @@
   <xs:element name="BlacksPropertyDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="BlacksPropertyDataSet" msprop:Generator_UserDSName="BlacksPropertyDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="JOB" msprop:Generator_TableClassName="JOBDataTable" msprop:Generator_TableVarName="tableJOB" msprop:Generator_TablePropName="JOB" msprop:Generator_RowDeletingName="JOBRowDeleting" msprop:Generator_RowChangingName="JOBRowChanging" msprop:Generator_RowEvHandlerName="JOBRowChangeEventHandler" msprop:Generator_RowDeletedName="JOBRowDeleted" msprop:Generator_UserTableName="JOB" msprop:Generator_RowChangedName="JOBRowChanged" msprop:Generator_RowEvArgName="JOBRowChangeEvent" msprop:Generator_RowClassName="JOBRow">
+        <xs:element name="JOB" msprop:Generator_TableClassName="JOBDataTable" msprop:Generator_TableVarName="tableJOB" msprop:Generator_RowChangedName="JOBRowChanged" msprop:Generator_TablePropName="JOB" msprop:Generator_RowDeletingName="JOBRowDeleting" msprop:Generator_RowChangingName="JOBRowChanging" msprop:Generator_RowEvHandlerName="JOBRowChangeEventHandler" msprop:Generator_RowDeletedName="JOBRowDeleted" msprop:Generator_RowClassName="JOBRow" msprop:Generator_UserTableName="JOB" msprop:Generator_RowEvArgName="JOBRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="JobID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnJobID" msprop:Generator_ColumnPropNameInRow="JobID" msprop:Generator_ColumnPropNameInTable="JobIDColumn" msprop:Generator_UserColumnName="JobID" type="xs:int" />
@@ -449,7 +449,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="JOBMATERIAL" msprop:Generator_TableClassName="JOBMATERIALDataTable" msprop:Generator_TableVarName="tableJOBMATERIAL" msprop:Generator_TablePropName="JOBMATERIAL" msprop:Generator_RowDeletingName="JOBMATERIALRowDeleting" msprop:Generator_RowChangingName="JOBMATERIALRowChanging" msprop:Generator_RowEvHandlerName="JOBMATERIALRowChangeEventHandler" msprop:Generator_RowDeletedName="JOBMATERIALRowDeleted" msprop:Generator_UserTableName="JOBMATERIAL" msprop:Generator_RowChangedName="JOBMATERIALRowChanged" msprop:Generator_RowEvArgName="JOBMATERIALRowChangeEvent" msprop:Generator_RowClassName="JOBMATERIALRow">
+        <xs:element name="JOBMATERIAL" msprop:Generator_TableClassName="JOBMATERIALDataTable" msprop:Generator_TableVarName="tableJOBMATERIAL" msprop:Generator_RowChangedName="JOBMATERIALRowChanged" msprop:Generator_TablePropName="JOBMATERIAL" msprop:Generator_RowDeletingName="JOBMATERIALRowDeleting" msprop:Generator_RowChangingName="JOBMATERIALRowChanging" msprop:Generator_RowEvHandlerName="JOBMATERIALRowChangeEventHandler" msprop:Generator_RowDeletedName="JOBMATERIALRowDeleted" msprop:Generator_RowClassName="JOBMATERIALRow" msprop:Generator_UserTableName="JOBMATERIAL" msprop:Generator_RowEvArgName="JOBMATERIALRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="JobID" msprop:Generator_ColumnVarNameInTable="columnJobID" msprop:Generator_ColumnPropNameInRow="JobID" msprop:Generator_ColumnPropNameInTable="JobIDColumn" msprop:Generator_UserColumnName="JobID" type="xs:int" />
@@ -458,7 +458,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="LANDLORD" msprop:Generator_TableClassName="LANDLORDDataTable" msprop:Generator_TableVarName="tableLANDLORD" msprop:Generator_TablePropName="LANDLORD" msprop:Generator_RowDeletingName="LANDLORDRowDeleting" msprop:Generator_RowChangingName="LANDLORDRowChanging" msprop:Generator_RowEvHandlerName="LANDLORDRowChangeEventHandler" msprop:Generator_RowDeletedName="LANDLORDRowDeleted" msprop:Generator_UserTableName="LANDLORD" msprop:Generator_RowChangedName="LANDLORDRowChanged" msprop:Generator_RowEvArgName="LANDLORDRowChangeEvent" msprop:Generator_RowClassName="LANDLORDRow">
+        <xs:element name="LANDLORD" msprop:Generator_TableClassName="LANDLORDDataTable" msprop:Generator_TableVarName="tableLANDLORD" msprop:Generator_RowChangedName="LANDLORDRowChanged" msprop:Generator_TablePropName="LANDLORD" msprop:Generator_RowDeletingName="LANDLORDRowDeleting" msprop:Generator_RowChangingName="LANDLORDRowChanging" msprop:Generator_RowEvHandlerName="LANDLORDRowChangeEventHandler" msprop:Generator_RowDeletedName="LANDLORDRowDeleted" msprop:Generator_RowClassName="LANDLORDRow" msprop:Generator_UserTableName="LANDLORD" msprop:Generator_RowEvArgName="LANDLORDRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="LandlordID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnLandlordID" msprop:Generator_ColumnPropNameInRow="LandlordID" msprop:Generator_ColumnPropNameInTable="LandlordIDColumn" msprop:Generator_UserColumnName="LandlordID" type="xs:int" />
@@ -507,7 +507,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="MATERIAL" msprop:Generator_TableClassName="MATERIALDataTable" msprop:Generator_TableVarName="tableMATERIAL" msprop:Generator_TablePropName="MATERIAL" msprop:Generator_RowDeletingName="MATERIALRowDeleting" msprop:Generator_RowChangingName="MATERIALRowChanging" msprop:Generator_RowEvHandlerName="MATERIALRowChangeEventHandler" msprop:Generator_RowDeletedName="MATERIALRowDeleted" msprop:Generator_UserTableName="MATERIAL" msprop:Generator_RowChangedName="MATERIALRowChanged" msprop:Generator_RowEvArgName="MATERIALRowChangeEvent" msprop:Generator_RowClassName="MATERIALRow">
+        <xs:element name="MATERIAL" msprop:Generator_TableClassName="MATERIALDataTable" msprop:Generator_TableVarName="tableMATERIAL" msprop:Generator_RowChangedName="MATERIALRowChanged" msprop:Generator_TablePropName="MATERIAL" msprop:Generator_RowDeletingName="MATERIALRowDeleting" msprop:Generator_RowChangingName="MATERIALRowChanging" msprop:Generator_RowEvHandlerName="MATERIALRowChangeEventHandler" msprop:Generator_RowDeletedName="MATERIALRowDeleted" msprop:Generator_RowClassName="MATERIALRow" msprop:Generator_UserTableName="MATERIAL" msprop:Generator_RowEvArgName="MATERIALRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MaterialID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnMaterialID" msprop:Generator_ColumnPropNameInRow="MaterialID" msprop:Generator_ColumnPropNameInTable="MaterialIDColumn" msprop:Generator_UserColumnName="MaterialID" type="xs:int" />
@@ -522,7 +522,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PROPERTY" msprop:Generator_TableClassName="PROPERTYDataTable" msprop:Generator_TableVarName="tablePROPERTY" msprop:Generator_TablePropName="PROPERTY" msprop:Generator_RowDeletingName="PROPERTYRowDeleting" msprop:Generator_RowChangingName="PROPERTYRowChanging" msprop:Generator_RowEvHandlerName="PROPERTYRowChangeEventHandler" msprop:Generator_RowDeletedName="PROPERTYRowDeleted" msprop:Generator_UserTableName="PROPERTY" msprop:Generator_RowChangedName="PROPERTYRowChanged" msprop:Generator_RowEvArgName="PROPERTYRowChangeEvent" msprop:Generator_RowClassName="PROPERTYRow">
+        <xs:element name="PROPERTY" msprop:Generator_TableClassName="PROPERTYDataTable" msprop:Generator_TableVarName="tablePROPERTY" msprop:Generator_RowChangedName="PROPERTYRowChanged" msprop:Generator_TablePropName="PROPERTY" msprop:Generator_RowDeletingName="PROPERTYRowDeleting" msprop:Generator_RowChangingName="PROPERTYRowChanging" msprop:Generator_RowEvHandlerName="PROPERTYRowChangeEventHandler" msprop:Generator_RowDeletedName="PROPERTYRowDeleted" msprop:Generator_RowClassName="PROPERTYRow" msprop:Generator_UserTableName="PROPERTY" msprop:Generator_RowEvArgName="PROPERTYRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="PropertyID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnPropertyID" msprop:Generator_ColumnPropNameInRow="PropertyID" msprop:Generator_ColumnPropNameInTable="PropertyIDColumn" msprop:Generator_UserColumnName="PropertyID" type="xs:int" />
@@ -552,7 +552,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="TRADESMAN" msprop:Generator_TableClassName="TRADESMANDataTable" msprop:Generator_TableVarName="tableTRADESMAN" msprop:Generator_TablePropName="TRADESMAN" msprop:Generator_RowDeletingName="TRADESMANRowDeleting" msprop:Generator_RowChangingName="TRADESMANRowChanging" msprop:Generator_RowEvHandlerName="TRADESMANRowChangeEventHandler" msprop:Generator_RowDeletedName="TRADESMANRowDeleted" msprop:Generator_UserTableName="TRADESMAN" msprop:Generator_RowChangedName="TRADESMANRowChanged" msprop:Generator_RowEvArgName="TRADESMANRowChangeEvent" msprop:Generator_RowClassName="TRADESMANRow">
+        <xs:element name="TRADESMAN" msprop:Generator_TableClassName="TRADESMANDataTable" msprop:Generator_TableVarName="tableTRADESMAN" msprop:Generator_RowChangedName="TRADESMANRowChanged" msprop:Generator_TablePropName="TRADESMAN" msprop:Generator_RowDeletingName="TRADESMANRowDeleting" msprop:Generator_RowChangingName="TRADESMANRowChanging" msprop:Generator_RowEvHandlerName="TRADESMANRowChangeEventHandler" msprop:Generator_RowDeletedName="TRADESMANRowDeleted" msprop:Generator_RowClassName="TRADESMANRow" msprop:Generator_UserTableName="TRADESMAN" msprop:Generator_RowEvArgName="TRADESMANRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="TradesmanID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnTradesmanID" msprop:Generator_ColumnPropNameInRow="TradesmanID" msprop:Generator_ColumnPropNameInTable="TradesmanIDColumn" msprop:Generator_UserColumnName="TradesmanID" type="xs:int" />
@@ -581,7 +581,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="JOB1" msprop:Generator_TableClassName="JOB1DataTable" msprop:Generator_TableVarName="tableJOB1" msprop:Generator_RowChangedName="JOB1RowChanged" msprop:Generator_TablePropName="JOB1" msprop:Generator_RowDeletingName="JOB1RowDeleting" msprop:Generator_RowChangingName="JOB1RowChanging" msprop:Generator_RowEvHandlerName="JOB1RowChangeEventHandler" msprop:Generator_RowDeletedName="JOB1RowDeleted" msprop:Generator_RowClassName="JOB1Row" msprop:Generator_UserTableName="JOB1" msprop:Generator_RowEvArgName="JOB1RowChangeEvent">
+        <xs:element name="JOB1" msprop:Generator_TableClassName="JOB1DataTable" msprop:Generator_TableVarName="tableJOB1" msprop:Generator_TablePropName="JOB1" msprop:Generator_RowDeletingName="JOB1RowDeleting" msprop:Generator_RowChangingName="JOB1RowChanging" msprop:Generator_RowEvHandlerName="JOB1RowChangeEventHandler" msprop:Generator_RowDeletedName="JOB1RowDeleted" msprop:Generator_UserTableName="JOB1" msprop:Generator_RowChangedName="JOB1RowChanged" msprop:Generator_RowEvArgName="JOB1RowChangeEvent" msprop:Generator_RowClassName="JOB1Row">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="JobID" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnJobID" msprop:Generator_ColumnPropNameInRow="JobID" msprop:Generator_ColumnPropNameInTable="JobIDColumn" msprop:Generator_UserColumnName="JobID" type="xs:int" />
@@ -606,7 +606,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="JOBMATERIAL1" msprop:Generator_TableClassName="JOBMATERIAL1DataTable" msprop:Generator_TableVarName="tableJOBMATERIAL1" msprop:Generator_RowChangedName="JOBMATERIAL1RowChanged" msprop:Generator_TablePropName="JOBMATERIAL1" msprop:Generator_RowDeletingName="JOBMATERIAL1RowDeleting" msprop:Generator_RowChangingName="JOBMATERIAL1RowChanging" msprop:Generator_RowEvHandlerName="JOBMATERIAL1RowChangeEventHandler" msprop:Generator_RowDeletedName="JOBMATERIAL1RowDeleted" msprop:Generator_RowClassName="JOBMATERIAL1Row" msprop:Generator_UserTableName="JOBMATERIAL1" msprop:Generator_RowEvArgName="JOBMATERIAL1RowChangeEvent">
+        <xs:element name="JOBMATERIAL1" msprop:Generator_TableClassName="JOBMATERIAL1DataTable" msprop:Generator_TableVarName="tableJOBMATERIAL1" msprop:Generator_TablePropName="JOBMATERIAL1" msprop:Generator_RowDeletingName="JOBMATERIAL1RowDeleting" msprop:Generator_RowChangingName="JOBMATERIAL1RowChanging" msprop:Generator_RowEvHandlerName="JOBMATERIAL1RowChangeEventHandler" msprop:Generator_RowDeletedName="JOBMATERIAL1RowDeleted" msprop:Generator_UserTableName="JOBMATERIAL1" msprop:Generator_RowChangedName="JOBMATERIAL1RowChanged" msprop:Generator_RowEvArgName="JOBMATERIAL1RowChangeEvent" msprop:Generator_RowClassName="JOBMATERIAL1Row">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="JobID" msprop:Generator_ColumnVarNameInTable="columnJobID" msprop:Generator_ColumnPropNameInRow="JobID" msprop:Generator_ColumnPropNameInTable="JobIDColumn" msprop:Generator_UserColumnName="JobID" type="xs:int" />
@@ -615,7 +615,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="LANDLORD1" msprop:Generator_TableClassName="LANDLORD1DataTable" msprop:Generator_TableVarName="tableLANDLORD1" msprop:Generator_RowChangedName="LANDLORD1RowChanged" msprop:Generator_TablePropName="LANDLORD1" msprop:Generator_RowDeletingName="LANDLORD1RowDeleting" msprop:Generator_RowChangingName="LANDLORD1RowChanging" msprop:Generator_RowEvHandlerName="LANDLORD1RowChangeEventHandler" msprop:Generator_RowDeletedName="LANDLORD1RowDeleted" msprop:Generator_RowClassName="LANDLORD1Row" msprop:Generator_UserTableName="LANDLORD1" msprop:Generator_RowEvArgName="LANDLORD1RowChangeEvent">
+        <xs:element name="LANDLORD1" msprop:Generator_TableClassName="LANDLORD1DataTable" msprop:Generator_TableVarName="tableLANDLORD1" msprop:Generator_TablePropName="LANDLORD1" msprop:Generator_RowDeletingName="LANDLORD1RowDeleting" msprop:Generator_RowChangingName="LANDLORD1RowChanging" msprop:Generator_RowEvHandlerName="LANDLORD1RowChangeEventHandler" msprop:Generator_RowDeletedName="LANDLORD1RowDeleted" msprop:Generator_UserTableName="LANDLORD1" msprop:Generator_RowChangedName="LANDLORD1RowChanged" msprop:Generator_RowEvArgName="LANDLORD1RowChangeEvent" msprop:Generator_RowClassName="LANDLORD1Row">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="LandlordID" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnLandlordID" msprop:Generator_ColumnPropNameInRow="LandlordID" msprop:Generator_ColumnPropNameInTable="LandlordIDColumn" msprop:Generator_UserColumnName="LandlordID" type="xs:int" />
@@ -664,7 +664,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="MATERIAL1" msprop:Generator_TableClassName="MATERIAL1DataTable" msprop:Generator_TableVarName="tableMATERIAL1" msprop:Generator_RowChangedName="MATERIAL1RowChanged" msprop:Generator_TablePropName="MATERIAL1" msprop:Generator_RowDeletingName="MATERIAL1RowDeleting" msprop:Generator_RowChangingName="MATERIAL1RowChanging" msprop:Generator_RowEvHandlerName="MATERIAL1RowChangeEventHandler" msprop:Generator_RowDeletedName="MATERIAL1RowDeleted" msprop:Generator_RowClassName="MATERIAL1Row" msprop:Generator_UserTableName="MATERIAL1" msprop:Generator_RowEvArgName="MATERIAL1RowChangeEvent">
+        <xs:element name="MATERIAL1" msprop:Generator_TableClassName="MATERIAL1DataTable" msprop:Generator_TableVarName="tableMATERIAL1" msprop:Generator_TablePropName="MATERIAL1" msprop:Generator_RowDeletingName="MATERIAL1RowDeleting" msprop:Generator_RowChangingName="MATERIAL1RowChanging" msprop:Generator_RowEvHandlerName="MATERIAL1RowChangeEventHandler" msprop:Generator_RowDeletedName="MATERIAL1RowDeleted" msprop:Generator_UserTableName="MATERIAL1" msprop:Generator_RowChangedName="MATERIAL1RowChanged" msprop:Generator_RowEvArgName="MATERIAL1RowChangeEvent" msprop:Generator_RowClassName="MATERIAL1Row">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MaterialID" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnMaterialID" msprop:Generator_ColumnPropNameInRow="MaterialID" msprop:Generator_ColumnPropNameInTable="MaterialIDColumn" msprop:Generator_UserColumnName="MaterialID" type="xs:int" />
@@ -679,7 +679,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PROPERTY1" msprop:Generator_TableClassName="PROPERTY1DataTable" msprop:Generator_TableVarName="tablePROPERTY1" msprop:Generator_RowChangedName="PROPERTY1RowChanged" msprop:Generator_TablePropName="PROPERTY1" msprop:Generator_RowDeletingName="PROPERTY1RowDeleting" msprop:Generator_RowChangingName="PROPERTY1RowChanging" msprop:Generator_RowEvHandlerName="PROPERTY1RowChangeEventHandler" msprop:Generator_RowDeletedName="PROPERTY1RowDeleted" msprop:Generator_RowClassName="PROPERTY1Row" msprop:Generator_UserTableName="PROPERTY1" msprop:Generator_RowEvArgName="PROPERTY1RowChangeEvent">
+        <xs:element name="PROPERTY1" msprop:Generator_TableClassName="PROPERTY1DataTable" msprop:Generator_TableVarName="tablePROPERTY1" msprop:Generator_TablePropName="PROPERTY1" msprop:Generator_RowDeletingName="PROPERTY1RowDeleting" msprop:Generator_RowChangingName="PROPERTY1RowChanging" msprop:Generator_RowEvHandlerName="PROPERTY1RowChangeEventHandler" msprop:Generator_RowDeletedName="PROPERTY1RowDeleted" msprop:Generator_UserTableName="PROPERTY1" msprop:Generator_RowChangedName="PROPERTY1RowChanged" msprop:Generator_RowEvArgName="PROPERTY1RowChangeEvent" msprop:Generator_RowClassName="PROPERTY1Row">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="PropertyID" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnPropertyID" msprop:Generator_ColumnPropNameInRow="PropertyID" msprop:Generator_ColumnPropNameInTable="PropertyIDColumn" msprop:Generator_UserColumnName="PropertyID" type="xs:int" />
@@ -709,7 +709,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="TRADESMAN1" msprop:Generator_TableClassName="TRADESMAN1DataTable" msprop:Generator_TableVarName="tableTRADESMAN1" msprop:Generator_RowChangedName="TRADESMAN1RowChanged" msprop:Generator_TablePropName="TRADESMAN1" msprop:Generator_RowDeletingName="TRADESMAN1RowDeleting" msprop:Generator_RowChangingName="TRADESMAN1RowChanging" msprop:Generator_RowEvHandlerName="TRADESMAN1RowChangeEventHandler" msprop:Generator_RowDeletedName="TRADESMAN1RowDeleted" msprop:Generator_RowClassName="TRADESMAN1Row" msprop:Generator_UserTableName="TRADESMAN1" msprop:Generator_RowEvArgName="TRADESMAN1RowChangeEvent">
+        <xs:element name="TRADESMAN1" msprop:Generator_TableClassName="TRADESMAN1DataTable" msprop:Generator_TableVarName="tableTRADESMAN1" msprop:Generator_TablePropName="TRADESMAN1" msprop:Generator_RowDeletingName="TRADESMAN1RowDeleting" msprop:Generator_RowChangingName="TRADESMAN1RowChanging" msprop:Generator_RowEvHandlerName="TRADESMAN1RowChangeEventHandler" msprop:Generator_RowDeletedName="TRADESMAN1RowDeleted" msprop:Generator_UserTableName="TRADESMAN1" msprop:Generator_RowChangedName="TRADESMAN1RowChanged" msprop:Generator_RowEvArgName="TRADESMAN1RowChangeEvent" msprop:Generator_RowClassName="TRADESMAN1Row">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="TradesmanID" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnTradesmanID" msprop:Generator_ColumnPropNameInRow="TradesmanID" msprop:Generator_ColumnPropNameInTable="TradesmanIDColumn" msprop:Generator_UserColumnName="TradesmanID" type="xs:int" />
@@ -790,17 +790,20 @@
       <xs:selector xpath=".//mstns:TRADESMAN1" />
       <xs:field xpath="mstns:TradesmanID" />
     </xs:unique>
-    <xs:keyref name="LANDLORD_PROPERTY" refer="LANDLORD_Constraint1" msprop:rel_Generator_UserChildTable="PROPERTY" msprop:rel_Generator_ChildPropName="GetPROPERTYRows" msprop:rel_Generator_UserRelationName="LANDLORD_PROPERTY" msprop:rel_Generator_ParentPropName="LANDLORDRow" msprop:rel_Generator_RelationVarName="relationLANDLORD_PROPERTY" msprop:rel_Generator_UserParentTable="LANDLORD" msdata:UpdateRule="None" msdata:DeleteRule="None">
+    <xs:keyref name="LANDLORD_PROPERTY" refer="LANDLORD_Constraint1" msprop:rel_Generator_UserChildTable="PROPERTY" msprop:rel_Generator_ChildPropName="GetPROPERTYRows" msprop:rel_Generator_UserRelationName="LANDLORD_PROPERTY" msprop:rel_Generator_RelationVarName="relationLANDLORD_PROPERTY" msprop:rel_Generator_UserParentTable="LANDLORD" msprop:rel_Generator_ParentPropName="LANDLORDRow" msdata:UpdateRule="None" msdata:DeleteRule="None">
       <xs:selector xpath=".//mstns:PROPERTY" />
       <xs:field xpath="mstns:LandlordID" />
+    </xs:keyref>
+    <xs:keyref name="PROPERTY_JOB" refer="PROPERTY_Constraint1" msprop:rel_Generator_UserChildTable="JOB" msprop:rel_Generator_ChildPropName="GetJOBRows" msprop:rel_Generator_UserRelationName="PROPERTY_JOB" msprop:rel_Generator_RelationVarName="relationPROPERTY_JOB" msprop:rel_Generator_UserParentTable="PROPERTY" msprop:rel_Generator_ParentPropName="PROPERTYRow" msdata:UpdateRule="None" msdata:DeleteRule="None">
+      <xs:selector xpath=".//mstns:JOB" />
+      <xs:field xpath="mstns:PropertyID" />
     </xs:keyref>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="PROPERTYJOB" msdata:parent="PROPERTY" msdata:child="JOB" msdata:parentkey="PropertyID" msdata:childkey="PropertyID" msprop:Generator_UserChildTable="JOB" msprop:Generator_ChildPropName="GetJOBRows" msprop:Generator_UserRelationName="PROPERTYJOB" msprop:Generator_RelationVarName="relationPROPERTYJOB" msprop:Generator_UserParentTable="PROPERTY" msprop:Generator_ParentPropName="PROPERTYRow" />
-      <msdata:Relationship name="TRADESMANJOB" msdata:parent="TRADESMAN" msdata:child="JOB" msdata:parentkey="TradesmanID" msdata:childkey="TradesmanID" msprop:Generator_UserChildTable="JOB" msprop:Generator_ChildPropName="GetJOBRows" msprop:Generator_UserRelationName="TRADESMANJOB" msprop:Generator_RelationVarName="relationTRADESMANJOB" msprop:Generator_UserParentTable="TRADESMAN" msprop:Generator_ParentPropName="TRADESMANRow" />
-      <msdata:Relationship name="JOBJOBMATERIAL" msdata:parent="JOB" msdata:child="JOBMATERIAL" msdata:parentkey="JobID" msdata:childkey="JobID" msprop:Generator_UserChildTable="JOBMATERIAL" msprop:Generator_ChildPropName="GetJOBMATERIALRows" msprop:Generator_UserRelationName="JOBJOBMATERIAL" msprop:Generator_ParentPropName="JOBRow" msprop:Generator_RelationVarName="relationJOBJOBMATERIAL" msprop:Generator_UserParentTable="JOB" />
-      <msdata:Relationship name="MATERIALJOBMATERIAL" msdata:parent="MATERIAL" msdata:child="JOBMATERIAL" msdata:parentkey="MaterialID" msdata:childkey="MaterialID" msprop:Generator_UserChildTable="JOBMATERIAL" msprop:Generator_ChildPropName="GetJOBMATERIALRows" msprop:Generator_UserRelationName="MATERIALJOBMATERIAL" msprop:Generator_RelationVarName="relationMATERIALJOBMATERIAL" msprop:Generator_UserParentTable="MATERIAL" msprop:Generator_ParentPropName="MATERIALRow" />
+      <msdata:Relationship name="TRADESMANJOB" msdata:parent="TRADESMAN" msdata:child="JOB" msdata:parentkey="TradesmanID" msdata:childkey="TradesmanID" msprop:Generator_UserChildTable="JOB" msprop:Generator_ChildPropName="GetJOBRows" msprop:Generator_UserRelationName="TRADESMANJOB" msprop:Generator_ParentPropName="TRADESMANRow" msprop:Generator_RelationVarName="relationTRADESMANJOB" msprop:Generator_UserParentTable="TRADESMAN" />
+      <msdata:Relationship name="JOBJOBMATERIAL" msdata:parent="JOB" msdata:child="JOBMATERIAL" msdata:parentkey="JobID" msdata:childkey="JobID" msprop:Generator_UserChildTable="JOBMATERIAL" msprop:Generator_ChildPropName="GetJOBMATERIALRows" msprop:Generator_UserRelationName="JOBJOBMATERIAL" msprop:Generator_RelationVarName="relationJOBJOBMATERIAL" msprop:Generator_UserParentTable="JOB" msprop:Generator_ParentPropName="JOBRow" />
+      <msdata:Relationship name="MATERIALJOBMATERIAL" msdata:parent="MATERIAL" msdata:child="JOBMATERIAL" msdata:parentkey="MaterialID" msdata:childkey="MaterialID" msprop:Generator_UserChildTable="JOBMATERIAL" msprop:Generator_ChildPropName="GetJOBMATERIALRows" msprop:Generator_UserRelationName="MATERIALJOBMATERIAL" msprop:Generator_ParentPropName="MATERIALRow" msprop:Generator_RelationVarName="relationMATERIALJOBMATERIAL" msprop:Generator_UserParentTable="MATERIAL" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
