@@ -88,7 +88,7 @@ namespace BlacksPropertyManagement
                 newJobRow["JobStatus"] = "Current";
                 newJobRow["PropertyID"] = propertyID;
                 DC.dsBlacksProperty.Tables["JOB"].Rows.Add(newJobRow);
-                DC.UpdateProperty();
+                DC.UpdateJob();
                 MessageBox.Show("Repair added successfully", "Acknowledgment", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ClearFields();
             }

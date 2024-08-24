@@ -51,7 +51,7 @@ namespace BlacksPropertyManagement
                     {
                         drJobMaterial.Delete();
                     }
-                    DC.UpdateJob();
+                    DC.UpdateJobMaterial();
                     deleteJobRow.Delete();
                     DC.UpdateJob();
                     MessageBox.Show("Job deleted successfully", "Acknowledgement", MessageBoxButtons.OK);
