@@ -68,6 +68,12 @@ namespace BlacksPropertyManagement
             daProperty.Update(dsBlacksProperty, "Property");
         }
 
+        public void UpdateJobMaterial()
+        {
+            daJobMaterial.Update(dsBlacksProperty, "JOBMATERIAL");
+        }
+
+
         private void daProperty_RowUpdated(object sender, OleDbRowUpdatedEventArgs e)
         {
             int newID = 0;

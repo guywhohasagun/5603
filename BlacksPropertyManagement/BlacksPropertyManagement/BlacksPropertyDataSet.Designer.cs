@@ -50,11 +50,11 @@ namespace BlacksPropertyManagement {
         
         private global::System.Data.DataRelation relationPROPERTY_JOB;
         
+        private global::System.Data.DataRelation relationJOB_JOBMATERIAL;
+        
         private global::System.Data.DataRelation relationLANDLORD_PROPERTY;
         
         private global::System.Data.DataRelation relationTRADESMANJOB;
-        
-        private global::System.Data.DataRelation relationJOBJOBMATERIAL;
         
         private global::System.Data.DataRelation relationMATERIALJOBMATERIAL;
         
@@ -469,9 +469,9 @@ namespace BlacksPropertyManagement {
                 }
             }
             this.relationPROPERTY_JOB = this.Relations["PROPERTY_JOB"];
+            this.relationJOB_JOBMATERIAL = this.Relations["JOB_JOBMATERIAL"];
             this.relationLANDLORD_PROPERTY = this.Relations["LANDLORD_PROPERTY"];
             this.relationTRADESMANJOB = this.Relations["TRADESMANJOB"];
-            this.relationJOBJOBMATERIAL = this.Relations["JOBJOBMATERIAL"];
             this.relationMATERIALJOBMATERIAL = this.Relations["MATERIALJOBMATERIAL"];
         }
         
@@ -515,6 +515,13 @@ namespace BlacksPropertyManagement {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
             fkc.UpdateRule = global::System.Data.Rule.None;
+            fkc = new global::System.Data.ForeignKeyConstraint("JOB_JOBMATERIAL", new global::System.Data.DataColumn[] {
+                        this.tableJOB.JobIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableJOBMATERIAL.JobIDColumn});
+            this.tableJOBMATERIAL.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.None;
+            fkc.UpdateRule = global::System.Data.Rule.None;
             fkc = new global::System.Data.ForeignKeyConstraint("LANDLORD_PROPERTY", new global::System.Data.DataColumn[] {
                         this.tableLANDLORD.LandlordIDColumn}, new global::System.Data.DataColumn[] {
                         this.tablePROPERTY.LandlordIDColumn});
@@ -526,6 +533,10 @@ namespace BlacksPropertyManagement {
                         this.tablePROPERTY.PropertyIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableJOB.PropertyIDColumn}, false);
             this.Relations.Add(this.relationPROPERTY_JOB);
+            this.relationJOB_JOBMATERIAL = new global::System.Data.DataRelation("JOB_JOBMATERIAL", new global::System.Data.DataColumn[] {
+                        this.tableJOB.JobIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableJOBMATERIAL.JobIDColumn}, false);
+            this.Relations.Add(this.relationJOB_JOBMATERIAL);
             this.relationLANDLORD_PROPERTY = new global::System.Data.DataRelation("LANDLORD_PROPERTY", new global::System.Data.DataColumn[] {
                         this.tableLANDLORD.LandlordIDColumn}, new global::System.Data.DataColumn[] {
                         this.tablePROPERTY.LandlordIDColumn}, false);
@@ -534,10 +545,6 @@ namespace BlacksPropertyManagement {
                         this.tableTRADESMAN.TradesmanIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableJOB.TradesmanIDColumn}, false);
             this.Relations.Add(this.relationTRADESMANJOB);
-            this.relationJOBJOBMATERIAL = new global::System.Data.DataRelation("JOBJOBMATERIAL", new global::System.Data.DataColumn[] {
-                        this.tableJOB.JobIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableJOBMATERIAL.JobIDColumn}, false);
-            this.Relations.Add(this.relationJOBJOBMATERIAL);
             this.relationMATERIALJOBMATERIAL = new global::System.Data.DataRelation("MATERIALJOBMATERIAL", new global::System.Data.DataColumn[] {
                         this.tableMATERIAL.MaterialIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableJOBMATERIAL.MaterialIDColumn}, false);
@@ -1167,14 +1174,14 @@ namespace BlacksPropertyManagement {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public JOBMATERIALRow AddJOBMATERIALRow(JOBRow parentJOBRowByJOBJOBMATERIAL, MATERIALRow parentMATERIALRowByMATERIALJOBMATERIAL, int Quantity) {
+            public JOBMATERIALRow AddJOBMATERIALRow(JOBRow parentJOBRowByJOB_JOBMATERIAL, MATERIALRow parentMATERIALRowByMATERIALJOBMATERIAL, int Quantity) {
                 JOBMATERIALRow rowJOBMATERIALRow = ((JOBMATERIALRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
                         Quantity};
-                if ((parentJOBRowByJOBJOBMATERIAL != null)) {
-                    columnValuesArray[0] = parentJOBRowByJOBJOBMATERIAL[0];
+                if ((parentJOBRowByJOB_JOBMATERIAL != null)) {
+                    columnValuesArray[0] = parentJOBRowByJOB_JOBMATERIAL[0];
                 }
                 if ((parentMATERIALRowByMATERIALJOBMATERIAL != null)) {
                     columnValuesArray[1] = parentMATERIALRowByMATERIALJOBMATERIAL[0];
@@ -4790,11 +4797,11 @@ namespace BlacksPropertyManagement {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public JOBMATERIALRow[] GetJOBMATERIALRows() {
-                if ((this.Table.ChildRelations["JOBJOBMATERIAL"] == null)) {
+                if ((this.Table.ChildRelations["JOB_JOBMATERIAL"] == null)) {
                     return new JOBMATERIALRow[0];
                 }
                 else {
-                    return ((JOBMATERIALRow[])(base.GetChildRows(this.Table.ChildRelations["JOBJOBMATERIAL"])));
+                    return ((JOBMATERIALRow[])(base.GetChildRows(this.Table.ChildRelations["JOB_JOBMATERIAL"])));
                 }
             }
         }
@@ -4855,10 +4862,10 @@ namespace BlacksPropertyManagement {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public JOBRow JOBRow {
                 get {
-                    return ((JOBRow)(this.GetParentRow(this.Table.ParentRelations["JOBJOBMATERIAL"])));
+                    return ((JOBRow)(this.GetParentRow(this.Table.ParentRelations["JOB_JOBMATERIAL"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["JOBJOBMATERIAL"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["JOB_JOBMATERIAL"]);
                 }
             }
             
