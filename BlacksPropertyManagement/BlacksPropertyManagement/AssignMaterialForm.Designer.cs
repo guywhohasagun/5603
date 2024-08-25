@@ -29,103 +29,236 @@ namespace BlacksPropertyManagement
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dgvJobs = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.dgvMaterial = new System.Windows.Forms.DataGridView();
+            this.btnAssignMaterial = new System.Windows.Forms.Button();
+            this.btnReturn = new System.Windows.Forms.Button();
+            this.lblQuantity = new System.Windows.Forms.Label();
+            this.nudQuantity = new System.Windows.Forms.NumericUpDown();
+            this.blacksPropertyDataSet = new BlacksPropertyManagement.BlacksPropertyDataSet();
+            this.blacksPropertyDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.JobID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.JobDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.JobDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.JobStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.JobFee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PropertyID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TradesmanID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvJobMaterial = new System.Windows.Forms.DataGridView();
+            this.jobIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.materialIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaterialID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaterialDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvJobs)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMaterial)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blacksPropertyDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blacksPropertyDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvJobMaterial)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvJobs
             // 
+            this.dgvJobs.AutoGenerateColumns = false;
             this.dgvJobs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvJobs.Location = new System.Drawing.Point(12, 12);
+            this.dgvJobs.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.JobID,
+            this.JobDescription,
+            this.JobDate,
+            this.JobStatus,
+            this.JobFee,
+            this.PropertyID,
+            this.TradesmanID});
+            this.dgvJobs.DataMember = "JOB";
+            this.dgvJobs.DataSource = this.blacksPropertyDataSetBindingSource;
+            this.dgvJobs.Location = new System.Drawing.Point(12, 34);
             this.dgvJobs.Name = "dgvJobs";
             this.dgvJobs.RowHeadersWidth = 51;
             this.dgvJobs.RowTemplate.Height = 24;
-            this.dgvJobs.Size = new System.Drawing.Size(976, 150);
+            this.dgvJobs.Size = new System.Drawing.Size(752, 150);
             this.dgvJobs.TabIndex = 0;
             // 
-            // dataGridView2
+            // dgvMaterial
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(12, 186);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(406, 150);
-            this.dataGridView2.TabIndex = 1;
+            this.dgvMaterial.AutoGenerateColumns = false;
+            this.dgvMaterial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMaterial.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaterialID,
+            this.MaterialDescription,
+            this.Cost});
+            this.dgvMaterial.DataMember = "MATERIAL";
+            this.dgvMaterial.DataSource = this.blacksPropertyDataSetBindingSource;
+            this.dgvMaterial.Location = new System.Drawing.Point(12, 387);
+            this.dgvMaterial.Name = "dgvMaterial";
+            this.dgvMaterial.RowHeadersWidth = 51;
+            this.dgvMaterial.RowTemplate.Height = 24;
+            this.dgvMaterial.Size = new System.Drawing.Size(353, 150);
+            this.dgvMaterial.TabIndex = 2;
             // 
-            // dataGridView3
+            // btnAssignMaterial
             // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(12, 365);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(484, 150);
-            this.dataGridView3.TabIndex = 2;
+            this.btnAssignMaterial.Location = new System.Drawing.Point(81, 581);
+            this.btnAssignMaterial.Name = "btnAssignMaterial";
+            this.btnAssignMaterial.Size = new System.Drawing.Size(182, 53);
+            this.btnAssignMaterial.TabIndex = 3;
+            this.btnAssignMaterial.Text = "Assign Material";
+            this.btnAssignMaterial.UseVisualStyleBackColor = true;
+            this.btnAssignMaterial.Click += new System.EventHandler(this.btnAssignMaterial_Click);
             // 
-            // button1
+            // btnReturn
             // 
-            this.button1.Location = new System.Drawing.Point(81, 581);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(182, 53);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnReturn.Location = new System.Drawing.Point(732, 581);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(182, 53);
+            this.btnReturn.TabIndex = 4;
+            this.btnReturn.Text = "Return";
+            this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
-            // button2
+            // lblQuantity
             // 
-            this.button2.Location = new System.Drawing.Point(732, 581);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(182, 53);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.lblQuantity.AutoSize = true;
+            this.lblQuantity.Location = new System.Drawing.Point(728, 446);
+            this.lblQuantity.Name = "lblQuantity";
+            this.lblQuantity.Size = new System.Drawing.Size(69, 19);
+            this.lblQuantity.TabIndex = 5;
+            this.lblQuantity.Text = "Quantity:";
             // 
-            // label1
+            // nudQuantity
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(773, 446);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 24);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "label1";
+            this.nudQuantity.Location = new System.Drawing.Point(803, 444);
+            this.nudQuantity.Name = "nudQuantity";
+            this.nudQuantity.Size = new System.Drawing.Size(60, 27);
+            this.nudQuantity.TabIndex = 6;
             // 
-            // numericUpDown1
+            // blacksPropertyDataSet
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(854, 444);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(60, 32);
-            this.numericUpDown1.TabIndex = 6;
+            this.blacksPropertyDataSet.DataSetName = "BlacksPropertyDataSet";
+            this.blacksPropertyDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // blacksPropertyDataSetBindingSource
+            // 
+            this.blacksPropertyDataSetBindingSource.DataSource = this.blacksPropertyDataSet;
+            this.blacksPropertyDataSetBindingSource.Position = 0;
+            // 
+            // JobID
+            // 
+            this.JobID.DataPropertyName = "JobID";
+            this.JobID.HeaderText = "JobID";
+            this.JobID.Name = "JobID";
+            // 
+            // JobDescription
+            // 
+            this.JobDescription.DataPropertyName = "JobDescription";
+            this.JobDescription.HeaderText = "JobDescription";
+            this.JobDescription.Name = "JobDescription";
+            // 
+            // JobDate
+            // 
+            this.JobDate.DataPropertyName = "JobDate";
+            this.JobDate.HeaderText = "JobDate";
+            this.JobDate.Name = "JobDate";
+            // 
+            // JobStatus
+            // 
+            this.JobStatus.DataPropertyName = "JobStatus";
+            this.JobStatus.HeaderText = "JobStatus";
+            this.JobStatus.Name = "JobStatus";
+            // 
+            // JobFee
+            // 
+            this.JobFee.DataPropertyName = "JobFee";
+            this.JobFee.HeaderText = "JobFee";
+            this.JobFee.Name = "JobFee";
+            // 
+            // PropertyID
+            // 
+            this.PropertyID.DataPropertyName = "PropertyID";
+            this.PropertyID.HeaderText = "PropertyID";
+            this.PropertyID.Name = "PropertyID";
+            // 
+            // TradesmanID
+            // 
+            this.TradesmanID.DataPropertyName = "TradesmanID";
+            this.TradesmanID.HeaderText = "TradesmanID";
+            this.TradesmanID.Name = "TradesmanID";
+            // 
+            // dgvJobMaterial
+            // 
+            this.dgvJobMaterial.AutoGenerateColumns = false;
+            this.dgvJobMaterial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvJobMaterial.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.jobIDDataGridViewTextBoxColumn,
+            this.materialIDDataGridViewTextBoxColumn,
+            this.quantityDataGridViewTextBoxColumn});
+            this.dgvJobMaterial.DataMember = "JOBMATERIAL";
+            this.dgvJobMaterial.DataSource = this.blacksPropertyDataSetBindingSource;
+            this.dgvJobMaterial.Location = new System.Drawing.Point(12, 209);
+            this.dgvJobMaterial.Name = "dgvJobMaterial";
+            this.dgvJobMaterial.Size = new System.Drawing.Size(342, 150);
+            this.dgvJobMaterial.TabIndex = 7;
+            // 
+            // jobIDDataGridViewTextBoxColumn
+            // 
+            this.jobIDDataGridViewTextBoxColumn.DataPropertyName = "JobID";
+            this.jobIDDataGridViewTextBoxColumn.HeaderText = "JobID";
+            this.jobIDDataGridViewTextBoxColumn.Name = "jobIDDataGridViewTextBoxColumn";
+            // 
+            // materialIDDataGridViewTextBoxColumn
+            // 
+            this.materialIDDataGridViewTextBoxColumn.DataPropertyName = "MaterialID";
+            this.materialIDDataGridViewTextBoxColumn.HeaderText = "MaterialID";
+            this.materialIDDataGridViewTextBoxColumn.Name = "materialIDDataGridViewTextBoxColumn";
+            // 
+            // quantityDataGridViewTextBoxColumn
+            // 
+            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
+            this.quantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
+            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
+            // 
+            // MaterialID
+            // 
+            this.MaterialID.DataPropertyName = "MaterialID";
+            this.MaterialID.HeaderText = "MaterialID";
+            this.MaterialID.Name = "MaterialID";
+            // 
+            // MaterialDescription
+            // 
+            this.MaterialDescription.DataPropertyName = "MaterialDescription";
+            this.MaterialDescription.HeaderText = "MaterialDescription";
+            this.MaterialDescription.Name = "MaterialDescription";
+            // 
+            // Cost
+            // 
+            this.Cost.DataPropertyName = "Cost";
+            this.Cost.HeaderText = "Cost";
+            this.Cost.Name = "Cost";
             // 
             // AssignMaterialForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 675);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView3);
-            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.dgvJobMaterial);
+            this.Controls.Add(this.nudQuantity);
+            this.Controls.Add(this.lblQuantity);
+            this.Controls.Add(this.btnReturn);
+            this.Controls.Add(this.btnAssignMaterial);
+            this.Controls.Add(this.dgvMaterial);
             this.Controls.Add(this.dgvJobs);
             this.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AssignMaterialForm";
             this.Text = "AssignMaterialForm";
             ((System.ComponentModel.ISupportInitialize)(this.dgvJobs)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMaterial)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blacksPropertyDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blacksPropertyDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvJobMaterial)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,11 +267,26 @@ namespace BlacksPropertyManagement
         #endregion
 
         private System.Windows.Forms.DataGridView dgvJobs;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.DataGridView dgvMaterial;
+        private System.Windows.Forms.Button btnAssignMaterial;
+        private System.Windows.Forms.Button btnReturn;
+        private System.Windows.Forms.Label lblQuantity;
+        private System.Windows.Forms.NumericUpDown nudQuantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn JobID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn JobDescription;
+        private System.Windows.Forms.DataGridViewTextBoxColumn JobDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn JobStatus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn JobFee;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PropertyID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TradesmanID;
+        private System.Windows.Forms.BindingSource blacksPropertyDataSetBindingSource;
+        private BlacksPropertyDataSet blacksPropertyDataSet;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaterialID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaterialDescription;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cost;
+        private System.Windows.Forms.DataGridView dgvJobMaterial;
+        private System.Windows.Forms.DataGridViewTextBoxColumn jobIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn materialIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
     }
 }
