@@ -33,9 +33,9 @@ namespace BlacksPropertyManagement
 
             int linesSoFar = 0;
 
-            Font textFont = new Font("Arial", 10, FontStyle.Regular);
-            Font textFontCenter = new Font("Arial", 10, FontStyle.Regular);
-            Font headingFont = new Font("Arial", 16, FontStyle.Bold);
+            Font textFont = new Font("Courier New", 10, FontStyle.Regular);
+            Font textFontCenter = new Font("Courier New", 10, FontStyle.Regular);
+            Font headingFont = new Font("Courier New", 16, FontStyle.Bold);
 
             DataRow drTradesman = tradesmanForPrint[amountOfTradesmanPrinted];
 
