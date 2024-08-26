@@ -53,27 +53,27 @@ namespace BlacksPropertyManagement
             this.lblSelectLandlord.AutoSize = true;
             this.lblSelectLandlord.Location = new System.Drawing.Point(43, 24);
             this.lblSelectLandlord.Name = "lblSelectLandlord";
-            this.lblSelectLandlord.Size = new System.Drawing.Size(158, 24);
+            this.lblSelectLandlord.Size = new System.Drawing.Size(124, 19);
             this.lblSelectLandlord.TabIndex = 0;
             this.lblSelectLandlord.Text = "Select a Landlord:";
             // 
             // lstLandlord
             // 
             this.lstLandlord.FormattingEnabled = true;
-            this.lstLandlord.ItemHeight = 24;
+            this.lstLandlord.ItemHeight = 19;
             this.lstLandlord.Location = new System.Drawing.Point(47, 51);
             this.lstLandlord.Name = "lstLandlord";
-            this.lstLandlord.Size = new System.Drawing.Size(910, 100);
+            this.lstLandlord.Size = new System.Drawing.Size(910, 99);
             this.lstLandlord.TabIndex = 1;
             this.lstLandlord.SelectedIndexChanged += new System.EventHandler(this.lstLandlord_SelectedIndexChanged);
             // 
             // lstProperty
             // 
             this.lstProperty.FormattingEnabled = true;
-            this.lstProperty.ItemHeight = 24;
+            this.lstProperty.ItemHeight = 19;
             this.lstProperty.Location = new System.Drawing.Point(47, 229);
             this.lstProperty.Name = "lstProperty";
-            this.lstProperty.Size = new System.Drawing.Size(910, 100);
+            this.lstProperty.Size = new System.Drawing.Size(910, 99);
             this.lstProperty.TabIndex = 3;
             this.lstProperty.SelectedIndexChanged += new System.EventHandler(this.lstProperty_SelectedIndexChanged);
             // 
@@ -82,7 +82,7 @@ namespace BlacksPropertyManagement
             this.lblDiscription.AutoSize = true;
             this.lblDiscription.Location = new System.Drawing.Point(43, 378);
             this.lblDiscription.Name = "lblDiscription";
-            this.lblDiscription.Size = new System.Drawing.Size(142, 24);
+            this.lblDiscription.Size = new System.Drawing.Size(112, 19);
             this.lblDiscription.TabIndex = 2;
             this.lblDiscription.Text = "Job Description:";
             // 
@@ -91,7 +91,7 @@ namespace BlacksPropertyManagement
             this.cboTradesman.FormattingEnabled = true;
             this.cboTradesman.Location = new System.Drawing.Point(191, 428);
             this.cboTradesman.Name = "cboTradesman";
-            this.cboTradesman.Size = new System.Drawing.Size(120, 32);
+            this.cboTradesman.Size = new System.Drawing.Size(120, 27);
             this.cboTradesman.TabIndex = 4;
             // 
             // txtDiscription
@@ -99,7 +99,7 @@ namespace BlacksPropertyManagement
             this.txtDiscription.Location = new System.Drawing.Point(191, 375);
             this.txtDiscription.MaxLength = 100;
             this.txtDiscription.Name = "txtDiscription";
-            this.txtDiscription.Size = new System.Drawing.Size(766, 32);
+            this.txtDiscription.Size = new System.Drawing.Size(766, 27);
             this.txtDiscription.TabIndex = 5;
             // 
             // cboFirstName
@@ -107,7 +107,7 @@ namespace BlacksPropertyManagement
             this.cboFirstName.FormattingEnabled = true;
             this.cboFirstName.Location = new System.Drawing.Point(649, 428);
             this.cboFirstName.Name = "cboFirstName";
-            this.cboFirstName.Size = new System.Drawing.Size(308, 32);
+            this.cboFirstName.Size = new System.Drawing.Size(308, 27);
             this.cboFirstName.TabIndex = 6;
             // 
             // cboLastName
@@ -115,7 +115,7 @@ namespace BlacksPropertyManagement
             this.cboLastName.FormattingEnabled = true;
             this.cboLastName.Location = new System.Drawing.Point(326, 428);
             this.cboLastName.Name = "cboLastName";
-            this.cboLastName.Size = new System.Drawing.Size(308, 32);
+            this.cboLastName.Size = new System.Drawing.Size(308, 27);
             this.cboLastName.TabIndex = 7;
             // 
             // lblSelectProperty
@@ -123,7 +123,7 @@ namespace BlacksPropertyManagement
             this.lblSelectProperty.AutoSize = true;
             this.lblSelectProperty.Location = new System.Drawing.Point(43, 202);
             this.lblSelectProperty.Name = "lblSelectProperty";
-            this.lblSelectProperty.Size = new System.Drawing.Size(156, 24);
+            this.lblSelectProperty.Size = new System.Drawing.Size(122, 19);
             this.lblSelectProperty.TabIndex = 8;
             this.lblSelectProperty.Text = "Select a Property:";
             // 
@@ -132,7 +132,7 @@ namespace BlacksPropertyManagement
             this.lblTradesman.AutoSize = true;
             this.lblTradesman.Location = new System.Drawing.Point(78, 431);
             this.lblTradesman.Name = "lblTradesman";
-            this.lblTradesman.Size = new System.Drawing.Size(107, 24);
+            this.lblTradesman.Size = new System.Drawing.Size(84, 19);
             this.lblTradesman.TabIndex = 9;
             this.lblTradesman.Text = "Tradesman:";
             // 
@@ -141,7 +141,7 @@ namespace BlacksPropertyManagement
             this.lblFee.AutoSize = true;
             this.lblFee.Location = new System.Drawing.Point(108, 485);
             this.lblFee.Name = "lblFee";
-            this.lblFee.Size = new System.Drawing.Size(77, 24);
+            this.lblFee.Size = new System.Drawing.Size(61, 19);
             this.lblFee.TabIndex = 10;
             this.lblFee.Text = "Job Fee:";
             // 
@@ -150,7 +150,7 @@ namespace BlacksPropertyManagement
             this.lblDate.AutoSize = true;
             this.lblDate.Location = new System.Drawing.Point(98, 543);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(87, 24);
+            this.lblDate.Size = new System.Drawing.Size(69, 19);
             this.lblDate.TabIndex = 11;
             this.lblDate.Text = "Job Date:";
             // 
@@ -194,7 +194,7 @@ namespace BlacksPropertyManagement
             0,
             0});
             this.nudFee.Name = "nudFee";
-            this.nudFee.Size = new System.Drawing.Size(120, 32);
+            this.nudFee.Size = new System.Drawing.Size(120, 27);
             this.nudFee.TabIndex = 14;
             this.nudFee.Value = new decimal(new int[] {
             80,
@@ -204,14 +204,15 @@ namespace BlacksPropertyManagement
             // 
             // dtpDate
             // 
+            this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDate.Location = new System.Drawing.Point(191, 537);
             this.dtpDate.Name = "dtpDate";
-            this.dtpDate.Size = new System.Drawing.Size(200, 32);
+            this.dtpDate.Size = new System.Drawing.Size(200, 27);
             this.dtpDate.TabIndex = 15;
             // 
             // AddJobForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 675);
             this.Controls.Add(this.dtpDate);

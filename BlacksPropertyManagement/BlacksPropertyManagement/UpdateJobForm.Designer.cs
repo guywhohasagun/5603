@@ -31,8 +31,6 @@ namespace BlacksPropertyManagement
         {
             this.components = new System.ComponentModel.Container();
             this.dgvJobs = new System.Windows.Forms.DataGridView();
-            this.blacksPropertyDataSet = new BlacksPropertyManagement.BlacksPropertyDataSet();
-            this.blacksPropertyDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.JobID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.JobDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.JobDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,6 +38,8 @@ namespace BlacksPropertyManagement
             this.JobFee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PropertyID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TradesmanID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.blacksPropertyDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.blacksPropertyDataSet = new BlacksPropertyManagement.BlacksPropertyDataSet();
             this.lblJobID = new System.Windows.Forms.Label();
             this.lblDescription = new System.Windows.Forms.Label();
             this.lblFee = new System.Windows.Forms.Label();
@@ -65,8 +65,8 @@ namespace BlacksPropertyManagement
             this.btnReturn = new System.Windows.Forms.Button();
             this.btnUpdateJob = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvJobs)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blacksPropertyDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.blacksPropertyDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blacksPropertyDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudFee)).BeginInit();
             this.rgbStatus.SuspendLayout();
             this.SuspendLayout();
@@ -91,16 +91,6 @@ namespace BlacksPropertyManagement
             this.dgvJobs.Size = new System.Drawing.Size(743, 150);
             this.dgvJobs.TabIndex = 0;
             this.dgvJobs.Click += new System.EventHandler(this.dgvJobs_Click);
-            // 
-            // blacksPropertyDataSet
-            // 
-            this.blacksPropertyDataSet.DataSetName = "BlacksPropertyDataSet";
-            this.blacksPropertyDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // blacksPropertyDataSetBindingSource
-            // 
-            this.blacksPropertyDataSetBindingSource.DataSource = this.blacksPropertyDataSet;
-            this.blacksPropertyDataSetBindingSource.Position = 0;
             // 
             // JobID
             // 
@@ -150,6 +140,16 @@ namespace BlacksPropertyManagement
             this.TradesmanID.HeaderText = "TradesmanID";
             this.TradesmanID.Name = "TradesmanID";
             this.TradesmanID.ReadOnly = true;
+            // 
+            // blacksPropertyDataSetBindingSource
+            // 
+            this.blacksPropertyDataSetBindingSource.DataSource = this.blacksPropertyDataSet;
+            this.blacksPropertyDataSetBindingSource.Position = 0;
+            // 
+            // blacksPropertyDataSet
+            // 
+            this.blacksPropertyDataSet.DataSetName = "BlacksPropertyDataSet";
+            this.blacksPropertyDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lblJobID
             // 
@@ -279,6 +279,7 @@ namespace BlacksPropertyManagement
             this.txtLastname.Location = new System.Drawing.Point(625, 425);
             this.txtLastname.MaxLength = 25;
             this.txtLastname.Name = "txtLastname";
+            this.txtLastname.ReadOnly = true;
             this.txtLastname.Size = new System.Drawing.Size(271, 27);
             this.txtLastname.TabIndex = 15;
             // 
@@ -287,6 +288,7 @@ namespace BlacksPropertyManagement
             this.txtFirstname.Location = new System.Drawing.Point(626, 467);
             this.txtFirstname.MaxLength = 25;
             this.txtFirstname.Name = "txtFirstname";
+            this.txtFirstname.ReadOnly = true;
             this.txtFirstname.Size = new System.Drawing.Size(271, 27);
             this.txtFirstname.TabIndex = 16;
             // 
@@ -295,6 +297,7 @@ namespace BlacksPropertyManagement
             this.txtLandlordID.Location = new System.Drawing.Point(626, 383);
             this.txtLandlordID.MaxLength = 5;
             this.txtLandlordID.Name = "txtLandlordID";
+            this.txtLandlordID.ReadOnly = true;
             this.txtLandlordID.Size = new System.Drawing.Size(74, 27);
             this.txtLandlordID.TabIndex = 17;
             // 
@@ -415,8 +418,8 @@ namespace BlacksPropertyManagement
             this.Text = "Update Job";
             this.Load += new System.EventHandler(this.UpdateJobForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvJobs)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blacksPropertyDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.blacksPropertyDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blacksPropertyDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudFee)).EndInit();
             this.rgbStatus.ResumeLayout(false);
             this.rgbStatus.PerformLayout();
